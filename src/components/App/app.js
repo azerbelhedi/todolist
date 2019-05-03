@@ -24,6 +24,7 @@ class App extends Component{
         this.removeDone = this.removeDone.bind(this) 
 
         this.menuDisplay = this.menuDisplay.bind(this) 
+        this.correct = this.correct.bind(this)
     }
 
     addTodo(data){
@@ -68,13 +69,28 @@ class App extends Component{
         this.setState(state) ;
     }
 
+    correct(){
+        let i = 0 ;
+        let state = this.state ;
+        state.todo.map(action => {
+            action.index = i ;
+            i++ ;
+        }) ;
+        this.setState(state) ;
+    }
+
     render(){
         console.log(this.state) 
         return(
             <div>
                 <TopBar data = {{menuDisplay : this.menuDisplay}}/>
                 <SideMenu data = {{display : this.state.displayMenu , menuDisplay : this.menuDisplay}}/>
-                <ActionList />
+                <ActionList data = {{
+                    addTodo : this.addTodo , 
+                    actions : this.state.todo , 
+                    removeTodo : this.removeTodo ,
+                    correct : this.correct
+                    }} />
             </div>
         )
     }

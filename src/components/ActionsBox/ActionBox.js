@@ -7,13 +7,18 @@ class ActionBox extends Component{
         super(props)
     }
 
+    deleteAction(){
+        this.props.data.removeTodo(this.props.data.action.index) ;
+        this.props.data.correct() ;
+    }
+
     render(){
         return(
             <div className="action-box">
-                <h1>Eat Food</h1>
-                <img className = "x-icon" src="https://img.icons8.com/metro/26/000000/x.png"/>
+                <h1>{this.props.data.action.name}</h1>
+                <img onClick = {() => {this.deleteAction()}} className = "x-icon" src="https://img.icons8.com/metro/26/000000/x.png"/>
                 <div className="content">
-                    <h3>you should prepare rice then eat it while watching big bang theory</h3>
+                    <h3>{this.props.data.action.details}</h3>
                 </div>
             </div>
         )
