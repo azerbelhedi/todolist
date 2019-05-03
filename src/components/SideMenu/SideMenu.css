@@ -1,0 +1,36 @@
+.side-menu{
+    position :fixed;
+    top :0;
+    left :0;
+    height :100%;
+    width :100%;
+    background-color: rgba(255, 255, 255, 0.671) ;
+}
+
+.side-menu .menu{
+    position: absolute;
+    top :0;
+    left :0;
+    height :100%;
+    width :350px;
+    background-color:  rgb(3, 94, 146) ;
+}
+
+.side-menu .icon{
+    height :30px;
+    width :30px;
+    margin : 0.5vw;
+}
+
+.side-menu .icon:hover{
+    cursor: pointer;
+}
+
+.side-menu .title{
+    position: absolute;
+    top :0;
+    left : 25%;
+    font-weight :bold ;
+    color :white;
+    font-family: 'Courier New', Courier, monospace ;
+}
