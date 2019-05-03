@@ -1,0 +1,42 @@
+.action-box{
+    min-height: 200px ;
+    width :250px ;
+    background-color: white ;
+    box-shadow: 1px 1px 5px grey ;
+    margin :20px;  /*  then remove it !!!!  */
+    padding-top :10px;
+    position: relative;
+}
+
+.action-box h1{
+    width :max-content;
+    margin : auto ;
+    font-weight: bold ;
+    font-family: 'Courier New', Courier, monospace ;
+}
+
+.action-box h3{
+    margin-left :20px;
+    margin-right :20px;
+    font-weight: lighter ;
+    font-family: 'Courier New', Courier, monospace ;
+    font-size: 12px ;
+    letter-spacing: 0.01px ;
+}
+
+.action-box .content{
+    background-color: rgb(221, 236, 248) ;
+    min-height :150px;
+    padding-top :15px;
+}
+
+.action-box .x-icon{
+    position: absolute ;
+    top :5px;
+    right :5px;
+    height :15px;
+}
+
+.action-box:hover{
+    cursor: pointer;
+}

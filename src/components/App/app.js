@@ -2,13 +2,15 @@ import React , { Component } from "react"
 
 import TopBar from '../TopBar/TopBar' 
 import SideMenu from '../SideMenu/SideMenu' 
+import ActionList from '../ActionsList/ActionList' 
+
 
 class App extends Component{
 
     constructor(props){
         super(props)  ;
         this.state = {
-            displayMenu : "block" ,
+            displayMenu : "none" ,
             todo : [
             ]
         }
@@ -72,6 +74,7 @@ class App extends Component{
             <div>
                 <TopBar data = {{menuDisplay : this.menuDisplay}}/>
                 <SideMenu data = {{display : this.state.displayMenu , menuDisplay : this.menuDisplay}}/>
+                <ActionList />
             </div>
         )
     }
